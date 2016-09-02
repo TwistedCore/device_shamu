@@ -26,6 +26,9 @@ ENABLE_CPUSETS := true
 
 TARGET_NO_BOOTLOADER := true
 
+CLANG_O3 := true
+STRICT_ALIASING := true
+
 TARGET_KERNEL_CONFIG := twisted_defconfig
 TARGET_KERNEL_SOURCE := kernel/moto/hells-Core-N6
 TARGET_GCC_VERSION_ARM := 6.x
