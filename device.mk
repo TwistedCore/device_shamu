@@ -214,6 +214,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.sib16_support=1 \
     persist.data.qmi.adb_logmask=0
 
+# WiFi calling
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.data.iwlan.enable=true \
+    persist.radio.ignore_ims_wlan=1 \
+    persist.radio.data_con_rprt=1
+
 #Reduce IMS logging
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.ims.disableDebugLogs=1 \
