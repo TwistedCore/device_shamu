@@ -208,7 +208,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.no_wait_for_card=1 \
     persist.radio.data_no_toggle=1 \
     persist.radio.sib16_support=1 \
-    persist.data.qmi.adb_logmask=0
+    persist.data.qmi.adb_logmask=0 \
+    persist.radio.alt_mbn_name=tmo_alt.mbn
+
+# never dexopt the MotoSignature
+$(call add-product-dex-preopt-module-config,MotoSignatureApp,disable)
 
 # WiFi calling
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -256,6 +260,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Allow tethering without provisioning app
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
+
+# Speed up art
+PRODUCT_PROPERTY_OVERRIDES += \
+dalvik.vm.image-dex2oat-filter=everything \
+dalvik.vm.dex2oat-filter=everything
 
 # Camera configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
