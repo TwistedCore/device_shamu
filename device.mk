@@ -24,6 +24,9 @@ PRODUCT_COPY_FILES += \
     device/moto/shamu/init.shamu.power.rc:root/init.shamu.power.rc \
     device/moto/shamu/init.shamu.usb.rc:root/init.shamu.usb.rc \
     device/moto/shamu/fstab.shamu:root/fstab.shamu \
+    device/moto/shamu/init.fk.rc:root/init.fk.rc \
+    device/moto/shamu/init.performance_profiles.rc:root/init.performance_profiles.rc \
+    device/moto/shamu/init.supolicy.sh:root/init.supolicy.sh \
     device/moto/shamu/ueventd.shamu.rc:root/ueventd.shamu.rc
 
 # Input device files for shamu
