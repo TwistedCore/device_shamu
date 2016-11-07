@@ -18,15 +18,12 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_VARIANT := krait
+TARGET_CPU_VARIANT := cortex-a15
+
 SDCLANG := true
 
-SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-3.8/bin
 ENABLE_CPUSETS := true
 
-TARGET_NO_BOOTLOADER := true
-CLANG_O3 := true
-STRICT_ALIASING := true
 TARGET_NO_BOOTLOADER := true
 
 TARGET_KERNEL_CONFIG := twisted_defconfig
