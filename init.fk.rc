@@ -26,6 +26,16 @@ on property:sys.boot_completed=1
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2649600
 
+    write /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay 0
+    write /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load 100
+    write /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq 0
+    write /sys/devices/system/cpu/cpufreq/interactive/io_is_busy 1
+    write /sys/devices/system/cpu/cpufreq/interactive/target_loads "30 422400:35 652800:40 729600:50 960000:55 1267200:60 1574400:65 1728000:70 1958400:75 2265600:80 2457600:85 2649600:95"
+    write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time 40000
+    write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 20000
+    write /sys/devices/system/cpu/cpufreq/interactive/max_freq_hysteresis 80000
+    write /sys/devices/system/cpu/cpufreq/interactive/timer_slack 30000
+
     # sched
     write /dev/cpuctl/cpu.notify_on_migrate 0
 
