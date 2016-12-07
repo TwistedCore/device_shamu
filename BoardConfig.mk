@@ -121,6 +121,7 @@ USE_DEVICE_SPECIFIC_CAMERA:= true
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.shamu
 
 USE_CLANG_PLATFORM_BUILD := true
+SDCLANG := true
 
 # Disable dex-preopt of prebuilts to save space.
 DONT_DEXPREOPT_PREBUILTS := true
